@@ -14,6 +14,7 @@ import {
   Building2,
   Calendar,
   AlertCircle,
+  Download,
 } from 'lucide-react';
 
 interface InvoiceDetailModalProps {
@@ -69,14 +70,26 @@ export function InvoiceDetailModal({ invoice, onClose, onRecordPayment }: Invoic
           </div>
 
           <div className="flex items-center gap-2">
+            <a
+              href={`/invoices/print/${invoice.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-outline btn-sm"
+              title="A4 formatda PDF ochish va yuklab olish"
+              style={{ gap: '6px' }}
+            >
+              <Download size={15} />
+              <span>PDF yuklab olish</span>
+            </a>
             <button
               onClick={handlePrint}
               type="button"
-              className="btn btn-outline btn-sm"
+              className="btn btn-secondary btn-sm"
               title="Chop etish yoki PDF sifatida saqlash"
+              style={{ gap: '6px' }}
             >
               <Printer size={15} />
-              <span>Chop etish (PDF)</span>
+              <span>Chop etish</span>
             </button>
             <button onClick={onClose} className="btn btn-ghost btn-sm" style={{ padding: '4px' }}>
               <X size={18} />
