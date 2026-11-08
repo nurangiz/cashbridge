@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>CashBridge B2B SaaS — Texnik Topshiriq va Loyiha Hujjati</title>
+  <style>
+    @page { size: A4; margin: 18mm 18mm 18mm 18mm; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: #0f172a;
+      line-height: 1.6;
+      background: #f8fafc;
+      padding: 30px;
+      font-size: 10.5pt;
+    }
+    .sheet {
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.06);
+    }
+    .header {
+      border-bottom: 2px solid #0f2b46;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    h1 { color: #0f2b46; font-size: 22pt; margin: 0 0 6px; }
+    h2 { color: #1e3a8a; font-size: 14pt; margin: 24px 0 10px; border-bottom: 1px solid #e2e8f0; padding-bottom: 6px; }
+    h3 { font-size: 11pt; color: #0f2b46; margin: 14px 0 6px; }
+    p { margin: 6px 0; color: #334155; }
+    .badge {
+      display: inline-block;
+      background: #ecfdf5;
+      color: #065f46;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 9pt;
+      border: 1px solid #10b981;
+    }
+    table { width: 100%; border-collapse: collapse; margin: 14px 0 24px; font-size: 9.5pt; }
+    th { background: #f1f5f9; padding: 10px; text-align: left; border: 1px solid #cbd5e1; font-weight: 700; }
+    td { padding: 9px 10px; border: 1px solid #e2e8f0; }
+    .print-btn {
+      display: inline-block;
+      background: #0f2b46;
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      margin-bottom: 20px;
+      cursor: pointer;
+      border: none;
+    }
+    @media print {
+      body { background: #fff; padding: 0; }
+      .sheet { box-shadow: none; padding: 0; }
+      .no-print { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div style="text-align: center;" class="no-print">
+    <button class="print-btn" onclick="window.print()">🖨️ Ushbu Hujjatni PDF qilib saqlash (Chop etish)</button>
+  </div>
+
+  <div class="sheet">
+    <div class="header">
+      <div>
+        <span class="badge">B2B SaaS Platforma Hujjati</span>
+        <h1 style="margin-top: 10px;">CashBridge MVP</h1>
+        <p><strong>Maqsad:</strong> O'z vaqtida to'lov olish va 30 kunlik pul oqimini bashorat qilish</p>
+      </div>
+      <div style="text-align: right; font-size: 9pt; color: #64748b;">
+        <p><strong>Sana:</strong> 2026-yil noyabr</p>
+        <p><strong>Holat:</strong> Production MVP</p>
+        <p><strong>GitHub:</strong> nurangiz/cashbridge</p>
+      </div>
+    </div>
+
+    <h2>1. Loyiha haqida va Muammo</h2>
+    <p>O'zbekistondagi B2B korxonalarning 45% dan ortig'i debitorlik qarzlarining kechikishi oqibatida kassa uzilishiga (cash gap) duch keladi. <strong>CashBridge</strong> kichik va o'rta biznes egalari hamda buxgalterlar uchun hisob-fakturalarni nazorat qilish, Telegram va Resend Email orqali avtomatik eslatmalar yuborish hamda naqd pul oqimini 30 kunga aniq modellashtirish tizimidir.</p>
+
+    <h2>2. Texnologik Stack</h2>
+    <table>
+      <tr><th>Qatlam</th><th>Texnologiya</th><th>Vazifasi</th></tr>
+      <tr><td>Frontend</td><td>Next.js 14 App Router + TypeScript</td><td>Yuqori tezlikdagi SSR/SSG arxitekturasi</td></tr>
+      <tr><td>Dizayn & UI</td><td>Bespoke Modern Fintech CSS</td><td>Tez yuklanuvchi, Dark/Light rejimli responsive dizayn</td></tr>
+      <tr><td>Ma'lumotlar bazasi</td><td>Supabase (PostgreSQL)</td><td>Ko'p ijarali (Multi-tenant) Row Level Security (RLS)</td></tr>
+      <tr><td>Integratsiyalar</td><td>Telegram Bot API + Resend</td><td>Mijozlarga avtomatik to'lov eslatmalari</td></tr>
+      <tr><td>Ko'p tillilik</td><td>next-intl arxitekturasi</td><td>3 ta to'liq til: O'zbek (asosiy), Rus, Ingliz</td></tr>
+    </table>
+
+    <h2>3. Asosiy Modullar</h2>
+    <h3>A. Mijozlar va Ishonchlilik Reytingi (0-100)</h3>
+    <p>Har bir mijoz uchun o'rtacha kechikish kunlari, to'langan va qarzdor fakturalar nisbati asosida 0 dan 100 gacha xavf reytingi shakllanadi (A'lo to'lovchi / O'rtacha kechikish / Yuqori xavf).</p>
+
+    <h3>B. Hisob-fakturalar va Professional PDF</h3>
+    <p>QQS 12%, xizmat pozitsiyalari va chegirmalar bilan to'liq avtomatlashtirilgan hisob-kitob. Bir klikda A4 formatidagi rasmiy muhr va bank rekvizitlariga ega PDF eksport.</p>
+
+    <h3>C. 30 kunlik Pul Oqimi (Cash Flow Forecast)</h3>
+    <p>Mijozning to'lov odatlariga moslashtirilgan kutilayotgan naqd tushumlar grafigi va kassa uzilishi xatarlari ogohlantirish panellari.</p>
+
+    <h3>D. Telegram va Email Eslatmalar</h3>
+    <p>Muddatdan 3 kun oldin, muddat kuni, 3, 7 va 14 kun kechikganda avtomatik muloyim va qat'iy eslatmalar yuborish jadvali.</p>
+
+    <h2>4. Xavfsizlik kafolati (Row Level Security)</h2>
+    <p>Tizimda har bir kompaniyaning ma'lumotlari PostgreSQL darajasida <code>company_id</code> bo'yicha to'liq izolyatsiya qilingan bo'lib, begonalar boshqa kompaniya faktura va summasini ko'ra olmaydi.</p>
+  </div>
+</body>
+</html>
