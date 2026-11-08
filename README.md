@@ -1,5 +1,7 @@
 # CashBridge — B2B SaaS Platform
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnurangiz%2Fcashbridge)
+
 > **O'z vaqtida to'lov oling, kassa uzilishini unuting.**  
 > Kichik va o'rta bizneslar uchun avtomatlashtirilgan to'lov eslatmalari (Telegram Bot + Resend Email), mijozlar ishonchlilik reytingi (0-100) va 30 kunlik pul oqimi prognozi (Cash Flow Forecast) platformasi.
 
